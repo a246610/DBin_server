@@ -1,0 +1,42 @@
+<html>
+	<title>Admin</title>
+	
+	<head>
+		<meta charset="UTF-8">	
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="../effect/admin.js"></script>
+		
+		<link rel="stylesheet" type="text/css"  href="../style/reset.css">
+		<link rel="stylesheet" type="text/css"  href="../style/admin-form.css">
+	</head>
+	
+	<body>
+	
+		<form method="POST" action="/" class="login">
+			<fieldset>
+			
+				<legend class="legend">Create a new DBIN</legend> 
+				
+				<div class="input">
+					<input  placeholder="ID " required  name="ID" id ="ID" value ="<%= row.ID %>" readonly/> 
+				</div>
+				
+				<div class="input">
+					<input	placeholder="DESCRIPTION" name="DESCRIPTION" id="DESCRIPTION" value="<%= row.DESCRIPTION %>"/> 
+				</div>
+				
+				<div class="input">
+					<input  placeholder="FLOOR"	name="FLOOR" id="FLOOR" value="<%= row.FLOOR %>" type="number" /> 
+				</div>
+				
+			<fieldset>
+			
+			<input name="btnUpdate" id="btnUpdate" class="submit" type="button" value="Update"/>
+		</form>
+			
+			
+		</form>
+		
+	</body>
+	

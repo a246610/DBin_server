@@ -1,0 +1,10 @@
+{
+	"name" : "DBIN",
+	"description" : "This is a web service manage DBIN ",
+	"author" : "Nguyen-Bao-Son",
+	"dependencies" : {
+		"express" : "4.13.3",
+		"body-parser" : "1.13.3",
+		"express-session" : "1.11.3"
+	}
+} 

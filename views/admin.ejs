@@ -1,0 +1,71 @@
+<html>
+	<title>Admin</title>
+	
+	<head>
+		<meta charset="UTF-8">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="../effect/admin.js"></script>
+			
+		<link rel="stylesheet" type="text/css"  href="../style/reset.css">
+		<link rel="stylesheet" type="text/css"  href="../style/admin-form.css">
+		<link rel="stylesheet" type="text/css"  href="../style/admin-table.css">
+	</head>
+
+	<script type="text/javascript">
+		setTimeout(function () { 
+		location.reload();
+		}, 10 * 1000);
+	</script>
+	<body>
+		<p> This is Admin page </p> <br/>
+		
+		<table class="CSSTableGenerator" style="width:80%;">
+		
+			<tr>
+				<td>ID</td>
+				<td>DESCRIPTION</td>
+				<td>FLOOR</td>
+				<td>STATE</td>
+				<td>UPDATE</td>
+				<td>DELETE</td>
+			</tr>
+		
+			<% rows.forEach(function(row){ %>
+				<tr>
+					<td> <%= row.ID %> </td>
+					<td> <%= row.DESCRIPTION %> </td>
+					<td> <%= row.FLOOR %> </td>
+					<td> <%= row.STATE %> </td>
+					<td> <a href='/updateDBIN/<%= row.ID %>'> Update</a> </td>
+					<td> <a href='/deleteDBIN/<%= row.ID %>' class="delete-btn" onclick="return confirm('Are you sure?')"> Delete </a> </td>
+				</tr>
+			<% }); %>
+		</table>
+		
+		<form method="POST" action="/" class="login">
+			<fieldset>
+			
+				<legend class="legend">Create a new DBIN</legend> 
+			<div class="input">
+					<input  placeholder="ID " required  name="ID" id="ID" required/> 
+				</div>
+				
+				<div class="input">
+					<input	placeholder="DESCRIPTION" name="DESCRIPTION" id="DESCRIPTION" /> 
+				</div>
+				
+				<div class="input">
+					<input  placeholder="FLOOR"	name="FLOOR" id="FLOOR" type="number" required/> 
+				</div>
+				
+			<fieldset>
+			
+			<input name="btnCreate" id="btnCreate" class="submit" value="Create" type="button"/>
+		</form>
+			
+			
+		</form>
+	</body>
+	
+</html>

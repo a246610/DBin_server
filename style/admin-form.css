@@ -1,0 +1,72 @@
+.login{
+  position: relative;
+	width: 300px;
+  display: table;
+  margin-left: 35%;
+  margin-top: 5%;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.legend{
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #bf5f00 100%;
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.legend:after{
+    content: "";
+    background-image: url(http://simpleicon.com/wp-content/uploads/multy-user.png);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: 152px -16px;
+    opacity: 0.06;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.input{
+  position: relative;
+  width: 90%;
+  margin: 15px auto;
+}
+
+.input  input,textarea{
+    width: 100%;
+    padding: 10px 5px 10px 40px;
+    display: block;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+    transition: 0.2s ease-out;
+    color: darken(#EDEDED, 30%);
+}
+    
+.input input,textarea::focus{
+      padding: 10px 5px 10px 10px;
+      outline: 0;
+      border-color: #ffaa56;
+}
+  
+.submit{
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 0 auto -15px auto;
+  background: #fff;
+  border: 1px solid #ffaa56;
+  color: #ffaa56;
+  font-size: 24px;
+  box-shadow: 0px 0px 0px 7px #fff;
+  transition: 0.2s ease-out;
+}
+.submit:hover, .submit:focus{
+    background: #ffaa56;
+    color: #fff;
+ }
