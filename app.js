@@ -214,6 +214,4 @@ app.get("/sendData/:first_floor/:end_floor/:weight",function(req,res){
 
 app.listen(8080);
 
-
-
 console.log("vao port 8080");
